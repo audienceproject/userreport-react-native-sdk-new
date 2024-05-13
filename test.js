@@ -104,10 +104,6 @@ test('regular mode', async () => {
       + '&idfv=__DeviceInfoUniqueId__'
       + '&appid=__DeviceInfoBundleId__'
       + '&appver=__VersionNumber__'
-      + '&os=__DeviceInfoSystemName__'
-      + '&osv=__DeviceInfoSystemVersion__'
-      + '&dn=__DeviceInfoBrand__%20__DeviceInfoDeviceId__'
-      + '&dr=150x300'
       + '&gdpr_consent=__FetchConsent__',
   );
 
@@ -120,10 +116,6 @@ test('regular mode', async () => {
       + '&idfv=__DeviceInfoUniqueId__'
       + '&appid=__DeviceInfoBundleId__'
       + '&appver=__VersionNumber__'
-      + '&os=__DeviceInfoSystemName__'
-      + '&osv=__DeviceInfoSystemVersion__'
-      + '&dn=__DeviceInfoBrand__%20__DeviceInfoDeviceId__'
-      + '&dr=150x300'
       + '&gdpr_consent=__FetchConsent__',
   );
 });
@@ -145,10 +137,6 @@ test('legacy idfa', async () => {
       + '&idfv=__DeviceInfoUniqueId__'
       + '&appid=__DeviceInfoBundleId__'
       + '&appver=__VersionNumber__'
-      + '&os=__DeviceInfoSystemName__'
-      + '&osv=__DeviceInfoSystemVersion__'
-      + '&dn=__DeviceInfoBrand__%20__DeviceInfoDeviceId__'
-      + '&dr=150x300'
       + '&gdpr_consent=__FetchConsent__',
   );
 });
@@ -178,10 +166,6 @@ test('dnt mode', async () => {
       + '&rnd=4fzzzxjylrx'
       + '&appid=__DeviceInfoBundleId__'
       + '&appver=__VersionNumber__'
-      + '&os=__DeviceInfoSystemName__'
-      + '&osv=__DeviceInfoSystemVersion__'
-      + '&dn=__DeviceInfoBrand__%20__DeviceInfoDeviceId__'
-      + '&dr=150x300'
       + '&gdpr_consent=__FetchConsent__',
   );
 
@@ -192,10 +176,6 @@ test('dnt mode', async () => {
       + '&rnd=4fzzzxjylrx'
       + '&appid=__DeviceInfoBundleId__'
       + '&appver=__VersionNumber__'
-      + '&os=__DeviceInfoSystemName__'
-      + '&osv=__DeviceInfoSystemVersion__'
-      + '&dn=__DeviceInfoBrand__%20__DeviceInfoDeviceId__'
-      + '&dr=150x300'
       + '&gdpr_consent=__FetchConsent__',
   );
 });

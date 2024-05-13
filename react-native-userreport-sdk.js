@@ -97,15 +97,6 @@ const fireTrackingPixel = async (trackingCode, consentString) => {
   const bundleId = ReactNativeDeviceInfo.getBundleId();
   const appVersion = ReactNativeDeviceInfo.getVersion();
 
-  const systemName = ReactNativeDeviceInfo.getSystemName();
-  const systemVersion = ReactNativeDeviceInfo.getSystemVersion();
-
-  const deviceName = `${ReactNativeDeviceInfo.getBrand()} ${ReactNativeDeviceInfo.getDeviceId()}`;
-  const screen = ReactNative.Dimensions.get('screen');
-  const screenWidth = Math.round(screen.width * screen.scale);
-  const screenHeight = Math.round(screen.height * screen.scale);
-  const deviceResolution = `${screenWidth}x${screenHeight}`;
-
   const path = `https://${domain}/hit.gif`;
   const params = `?t=${encodeURIComponent(trackingCode)}` // eslint-disable-line prefer-template
     + `&rnd=${random}`
@@ -113,10 +104,6 @@ const fireTrackingPixel = async (trackingCode, consentString) => {
     + (!useAnonymousTracking && idfv ? `&idfv=${encodeURIComponent(idfv)}` : '')
     + `&appid=${encodeURIComponent(bundleId)}`
     + `&appver=${encodeURIComponent(appVersion)}`
-    + `&os=${encodeURIComponent(systemName)}`
-    + `&osv=${encodeURIComponent(systemVersion)}`
-    + `&dn=${encodeURIComponent(deviceName)}`
-    + `&dr=${encodeURIComponent(deviceResolution)}`
     + (consentString ? `&gdpr_consent=${encodeURIComponent(consentString)}` : '');
 
   const url = path + params;
